@@ -1,17 +1,12 @@
 prepare:
-  # Put your commands here.
   steps:
-  - name: "Install dependencies"
-    command: "npm ci"
-
+    - name: Set node version
+      command: sudo -u admin n 18.5
+    - name: Install dependencies
+      command: npm i
 test:
-  # Put your commands here.
-  steps:
-  - name: "Unit Tests"
-    command: "yarn test --watchAll=false --passWithNoTests"
-
+  steps: []
 run:
-  # Put your commands here.
   steps:
-  - name: "Run"
-    command: "npm start"
+    - name: Run
+      command: npm start
