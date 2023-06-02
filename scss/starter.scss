@@ -82,6 +82,8 @@ $success: #7952b3;
 
 body {
   padding: 3rem 1.5rem;
+  background: url(../images/bg-blur.webp) no-repeat center, url(../images/stars.webp) repeat center;
+  background-color: #110e27;
 }
 
 // Style Bootstrap icons
@@ -93,11 +95,12 @@ body {
     max-width: 400px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    align-self: center;
+    @media screen and (max-width: 900px) {
+		background-color: rgba(white, 0.8);
+	}
 }
 
-p, a {
-    font-family: 'Source Sans Pro', sans-serif;
-}
 
 main h2 {
     font-weight: 600;
@@ -118,20 +121,28 @@ main h2 {
     border: 2px solid white;
 }
 
-a.button, a.button:hover {
+a.button {
     color: white;
+    height: 56px;
+    overflow: hidden;
+    background: #814bf6;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     border-radius: 0;
-    padding: 1rem;
+    padding: 17px 22px;
     font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+    &:hover {
+        background: #6535cf;
+        box-shadow: 0px 5px 15px rgba(128, 0, 255, 0.3);
+        color: white;
+    }
 }
-
-.linear-gradient {
-    background: linear-gradient(145deg, rgba(2,43,149,1) 0%, rgba(23,169,194,1) 100%); 
-}
-
-.social-media a{
-    font-size: 2em;
-    color: inherit;
+a {
+    color: #814bf6;
+    &:hover {
+        color: #6535cf;
+        text-decoration: none;
+    }
 }
 
